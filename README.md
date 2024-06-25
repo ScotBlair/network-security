@@ -11,7 +11,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Various Network Protocols (ICMP, SSH, RDP, DNS)
 
 <h2>Operating Systems Used </h2>
 
@@ -34,7 +34,9 @@ Back on VM1, the ping to VM2 had stopped and the words "Request timed out" now a
 <br />![ICMP ping 1](https://github.com/ScotBlair/network-security/assets/171102023/973dc6f7-3b66-4edd-9b16-28f8e4464cd0)<br />
 Once the security rule was deleted, the reply to VM2 was received once again.
 
+<h2></h2>
 
-<h2>Actions and Observations</h2>
+- 
+  -
 
 

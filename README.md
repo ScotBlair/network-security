@@ -21,7 +21,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
   - Step 1<br />
-Two Virtual Machines were created in Microsoft Azure: VM1 and VM2.
+Two Virtual Machines were created in Microsoft Azure: VM1 running Windows 10 (21H2) and VM2 running Ubuntu Server 20.04.
 On VM1, a perpetual ping was sent using the "ping -t" command in Command Prompt to the private IP address of VM2.  Being that the two VM's were on the same network with no restrictions, a reply was received.
 
   - Step 2<br />

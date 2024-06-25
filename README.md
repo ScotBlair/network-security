@@ -11,7 +11,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (ICMP, SSH, RDP, DNS)
+- Various Network Protocols (ICMP, SSH, DNS, RDP)
 
 <h2>Operating Systems Used </h2>
 
@@ -36,7 +36,23 @@ Once the security rule was deleted, the reply to VM2 was received once again.
 
 <h2></h2>
 
-- 
-  -
+  - Step 1<br />
+Wireshark was downloaded onto VM1, and network traffic was first filtered by "tcp.port == 22" (SSH).
 
+  - Step 2<br />
+Using Command Prompt, VM1 remotely accessed VM2 using the command "ssh labuser@48.217.123.158," and after entering the password, was given access.
+*NOTE: "labuser" is the name of VM2, and the numbers that follow are VM2's private ip address*
+<br />![1](https://github.com/ScotBlair/network-security/assets/171102023/e98e97cf-b5b7-4f2a-a2ac-a0bba56c579a)<br />
 
+  - Step 3<br />
+At this point, Wireshark started to display traffic between the two VM's.  Any keystroke made would produce new traffic, such as the set of words "bread markers paper box."
+<br />![2](https://github.com/ScotBlair/network-security/assets/171102023/7d7d0edf-8fd9-47fc-ac2a-a44a1de99c7d)<br />
+
+  - Step 4<br />
+Network traffic was then filtered by "udp.port == 53" (DNS).
+
+  - Step 5<br />
+Using Command Prompt, VM1 looked up Disney using "nslookup www.disney.com."  The server information and public IP addresses displayed in the prompt also appeared in Wireshark.
+ <br />![nslookup udp port == 53](https://github.com/ScotBlair/network-security/assets/171102023/56353172-3306-4b41-96d2-23c83eae25f2)<br />
+
+  - Step 6<br />
